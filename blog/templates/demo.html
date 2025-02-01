@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Index Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>{{Title}}</h1>
+    <p>{{TitleTag}}</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section>
+    <h2>Introduction</h2>
+    <p>This is a simple demo of an HTML index page. You can customize it further based on your needs.</p>
+    <p>Feel free to explore the navigation links above to simulate a multi-page experience!</p>
+    {% for n in Datalist %}
+        <div>{{forloop.counter}} {{ n }}</div>
+     {% endfor %}
+</section>
+
+<section>
+  <table border="1" cellpadding="10">
+   <tr>
+    <td> Name </td>
+    <td>Mobile Number </td>
+   </tr>
+     {% for userdata in Userlist %}
+   <tr>
+    <td> {{userdata.Name}} </td>    
+    <td> {{userdata.MobileNo}} </td>
+   </tr>
+   {% endfor %}
+
+  </table>
+
+{% comment %} check if else statement  {% endcomment %}
+
+    {% if numberlist|length > 0 %}
+
+    {% for  n  in numberlist %}  
+       {% if n > 20 %}  
+       <div> {{n}}</div>
+
+    
+
+     {% endif %}
+
+
+    {% endfor %}
+
+   {% else %}
+    No data in list 
+   {% endif %}
+
+
+</section>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<footer >
+    <p>&copy; 2025 Demo Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
