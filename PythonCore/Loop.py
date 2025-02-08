@@ -66,3 +66,24 @@
 
 
 # -------------------------------------
+
+# for letter in 'sanjaykumar ':
+#     if letter == 'e' or letter == 's':
+#         continue
+#     print('Current Letter :', letter)
+
+# ......................................
+
+
+# for letter  in 'sanjaykumar':
+#     if letter =='e' or letter == 's':
+#        break
+#     print("current letter :",letter)
+    
+for letter in 'geeksforgeeks':
+    if letter == 'e' or letter == 's':
+        break
+
+    print('Current Letter :', letter)
+        
+# ---------------------------------------------     
